@@ -1,0 +1,133 @@
+wodeon  v1.8  MPEG-1 video player instructions  by omiokone
+
+1. Install
+  Copy an execution file suitable for the device CPU type to the folder like
+  "\Program Files".
+
+    execution file  CPU
+    wodeon_mps.exe  MIPS R4000, NEC VR4000, Philips Pr31000, Toshiba TX3900
+    wodeon_sh3.exe  Hitachi SH-3
+    wodeon_sh4.exe  Hitachi SH-4
+    wodeon_arm.exe  ARM, StrongARM, XScale(PXA)
+
+  Use the special version in CE1.00 folder for the earliest CE1.0 devices such
+  as CASIO A-11. If your device is CE1.01 or later, the normal one is better.
+
+2. Start
+  Before running wodeon:
+    Close other softwares (at least for the first test). Do not forget cut off
+    the PC connection like ActiveSync.
+    Put off the screen tap and keyboard sound to avoid a conflict of audio.
+
+  Controls              keyboard       hardware buttons
+    function          (Handheld PC)      (Pocket PC)
+    select file             O
+    forward search     right arrow            Up
+    play / pause      Space or Enter        Action
+    backward search    left arrow            Down
+    jump(seek)              J
+    option settings         S
+    exit                    X
+
+    Backward search from the stop state is also operable when once the file is
+    played to the end.
+    Select or input directly hour/min on the jump window, and the play starts
+    from specified time. Restart button starts the play from the beginning.
+    The volume can be turned with comma/period keys (,.) on Handheld PC.
+
+3. Option settings
+  Video Enable    video decoding is available when checked on.
+  High-rate       refresh rate for typical MPEG files
+    on            10 pictures/sec (decoding I and P pictures)
+    off            2 pictures/sec (decoding I pictures only)
+
+  Audio Enable    audio decoding is available when checked on.
+                  (Audio must be off for CE1.0 devices)
+  Stereo          Enable stereo audio for stereo datas.
+
+  Display
+    B&W           4/16/256 levels and other monochrome
+    color         256/4096/65536 and other colors
+    Select a display specific mode if possible, as "other" mode is slower.
+    Use "B&W 4" on CE1.0, as "B&W 4 fast" does not work.
+
+  x 2             magnify a screen twofold when checked on.
+  Rotate          rotate a screen when checked on.
+  Hide
+    Bar           hide a taskbar (navigation bar) when checked on.
+                  (unavailable on CE1.0 devices, a taskbar is always hidden)
+    Buttons       hide buttons on the screen during play when checked on.
+                  (tapping a screen or ESC key (on Handheld) restores buttons,
+                   play after pause hides buttons again during play)
+
+  Audio Delay     adjust to synchronize video and audio according to response
+                  speed of the display.
+
+  Endless         play repeatedly when checked on.
+  Large Buffer    enable to play high bitrate files when checked on, although
+                  this requires about 300Kbytes of excess memory.
+  Uninstall       normally off (refer section 4).
+
+4. Uninstall
+  Check on Uninstall option and press OK, then close wodeon. This erase registry
+  settings. Now delete wodeon execution file.
+
+  Note: wodeon uses registry key "HKEY_CURRENT_USER\Software\wodeon".
+
+5. Net stream function
+  Files on remote servers can be played by specifying URL.
+  Your device must have a net access (i.e. PocketIE works).
+
+  Escape from Open file window by pressing a X button, and Open URL window comes
+  out. Enter URL beginning with http:// (like http://www.xxx.com/test.mpeg).
+  The play is as a local file, although search/jump functions do not work.
+  Use Large Buffer option if possible.
+  You can cancel 'connecting' by pressing any key (HPC) or any hardware button
+  (PPC).
+  Proxy is not supported.
+
+6. Plain playlist
+  Make a list of files with folder names one for a line using PocketWord or an
+  editor, and save this as xxx.pls (xxx is arbitrary).
+  If you use PocketWord, save this as a text file and rename it.
+  Open this and wodeon plays the listed files in order.
+
+  example of a list: \Storage Card\My Documents\yyy.mpeg
+                     \My Documents\zzz.mpeg
+
+7. Specifications
+  MPEG-1 file type:       system stream (elementary stream not supported)
+  maximum picture size:   352 x 288
+  audio encoding:         layer II (I and III not supported)
+  maximum file size/time: 4Gbytes/4hours
+                          (the file which exceeds these limits can be also
+                           played, although search/jump functions do not work)
+
+  I and P pictures are decoded. B picutures are skipped.
+  Half pel (1/2 dot movement) is not processed.
+
+8. Trouble shooting
+  Insufficient CPU speed cause an intermittent play, a time lag between video 
+  and audio. Try followings.
+    Check off High-rate, Stereo, and x 2.
+    Check off Audio Enable and play video only.
+
+  If "input buffer overflow" error occurs, try "Large Buffer" option.
+
+  You can play files other than MPEG-1, elementary stream type and too high
+  bitrate by converting them with some video converter software like TMPGEnc.
+
+9. About charityware
+  If you are pleased with this software, make some charity payment to "Vaccines
+  for the World's Children" in your country or other charitable organizations.
+
+10. Others
+  Wodeon is "as is" software for my own study and I will not warrant and support
+  this.
+
+  You can freely copy and redistribute wodeon for non-profit purpose. Hand over
+  wodeon as the whole zip file with the manual and source codes.
+
+  Special thanks to 
+  Youto Tokishiro who tested for color display devices.
+  Yoshiki Komatsudaira who advised on and tested for the earliest CE1.0 devices.
