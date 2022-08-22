@@ -1,0 +1,244 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ニュートラル resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONBOX DIALOG DISCARDABLE  0, 0, 119, 111
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "wodeon  v1.8  by omiokone"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,81,94,25,14
+    LTEXT           "Video",IDC_STATIC,5,4,25,8,NOT WS_GROUP
+    CONTROL         "Enable",IDC_VIDEO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    31,3,40,10
+    CONTROL         "High-rate",IDC_RATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,3,45,10
+    LTEXT           "Audio",IDC_STATIC,5,15,25,8,NOT WS_GROUP
+    CONTROL         "Enable",IDC_AUDIO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    31,14,40,10
+    CONTROL         "Stereo",IDC_STEREO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,14,45,10
+    LTEXT           "Display",IDC_STATIC,5,29,35,8,NOT WS_GROUP
+    COMBOBOX        IDC_DISPLAY,41,27,65,63,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         " x 2",IDC_MAG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,
+                    42,40,10
+    CONTROL         "Rotate",IDC_ROTATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,42,45,10
+    LTEXT           "Hide",IDC_STATIC,5,54,25,8,NOT WS_GROUP
+    CONTROL         "Bar",IDC_BAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,
+                    53,40,10
+    CONTROL         "Buttons",IDC_BUTTONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,53,45,10
+    LTEXT           "Audio Delay",IDC_STATIC,5,68,50,8,NOT WS_GROUP
+    COMBOBOX        IDC_DELAY,56,66,50,47,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Endless",IDC_ENDLESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,81,46,10
+    CONTROL         "Large Buffer",IDC_BUFFER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,52,81,66,10
+    CONTROL         "Uninstall",IDC_UNINSTALL,"Button",BS_AUTOCHECKBOX,5,94,
+                    50,10
+END
+
+IDD_OPENURL DIALOG DISCARDABLE  0, 0, 101, 53
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Open URL"
+FONT 10, "Arial"
+BEGIN
+    EDITTEXT        IDC_URL,5,10,91,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,38,29,25,14
+END
+
+IDD_JUMP DIALOG DISCARDABLE  0, 0, 103, 62
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Jump"
+FONT 9, "Arial"
+BEGIN
+    PUSHBUTTON      "&Restart",IDC_RESTART,55,43,40,14
+    LTEXT           "hour",IDC_STATIC,10,9,25,8,NOT WS_GROUP
+    COMBOBOX        IDC_HOUR,40,7,55,60,CBS_DROPDOWN | CBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "min",IDC_STATIC,10,26,25,8,NOT WS_GROUP
+    COMBOBOX        IDC_MIN,40,24,55,60,CBS_DROPDOWN | CBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,8,43,40,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WODEON              ICON    DISCARDABLE     "wodeon.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPTIONBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_OPENURL, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 96
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_OPEN                BITMAP  DISCARDABLE     "bitmap\\open.bmp"
+IDB_FWD                 BITMAP  DISCARDABLE     "bitmap\\fwd.bmp"
+IDB_PLAY                BITMAP  DISCARDABLE     "bitmap\\play.bmp"
+IDB_PAUSE               BITMAP  DISCARDABLE     "bitmap\\pause.bmp"
+IDB_REW                 BITMAP  DISCARDABLE     "bitmap\\rew.bmp"
+IDB_JUMP                BITMAP  DISCARDABLE     "bitmap\\jump.bmp"
+IDB_OPTION              BITMAP  DISCARDABLE     "bitmap\\option.bmp"
+IDB_QUIT                BITMAP  DISCARDABLE     "bitmap\\quit.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "wodeon"
+    IDS_ERR_CAPTION         "Error"
+    IDS_ERR_OPEN            "cannot open file: %s"
+    IDS_ERR_ELEMENT         "elementary stream not supported"
+    IDS_ERR_BUFFER          "input buffer overflow"
+    IDS_ERR_MEMORY          "insufficient memory"
+    IDS_ERR_PICTURE         "picture size too big"
+    IDS_ERR_VIDEO           "illegal video data"
+    IDS_ERR_LAYER           "audio encoding not layer II"
+    IDS_ERR_AUDIO           "illegal audio data"
+    IDS_ERR_DISPLAY         "graphic display exception"
+    IDS_ERR_WAVE            "audio driver exception"
+    IDS_ERR_SOCKET          "socket failure"
+    IDS_ERR_HOST            "unknown host"
+    IDS_ERR_CONNECT         "connection failure"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_STATUS          "file not found"
+    IDS_ERR_BROKEN          "broken data"
+    IDS_CB_BW4              "B&W 4"
+    IDS_CB_BW4F             "B&W 4 fast"
+    IDS_CB_BW16             "B&W 16"
+    IDS_CB_BW256            "B&W 256"
+    IDS_CB_BW               "B&W other"
+    IDS_CB_C256             "color 256"
+    IDS_CB_C4096            "color 4096"
+    IDS_CB_C65536           "color 65536"
+    IDS_CB_COLOR            "color other"
+    IDS_CB_DLY0             "0ms"
+    IDS_CB_DLY1             "300ms"
+    IDS_CB_DLY2             "600ms"
+    IDS_CB_DLY3             "900ms"
+    IDS_CONNECT             "connecting"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SEEK                "seeking"
+END
+
+#endif    // ニュートラル resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
